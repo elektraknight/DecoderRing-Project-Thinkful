@@ -23,8 +23,8 @@ describe('Caesar shift', () => {
     
     it(`(thinkful, 3, false) should be: thinkful`, () => {
         let actual = caesar("wklqnixo", 3, false);
-        //let expected = 'thinkful';
-        expect(actual).to.be.false;
+        let expected = 'thinkful';
+        expect(actual).to.equal(expected);
     })
     
     it(`(This is a secret message!, 8) should be: bpqa qa i amkzmb umaaiom!`, () => {
@@ -35,8 +35,9 @@ describe('Caesar shift', () => {
     
     it(`(thinkful) should be: false`, () => {
         let actual = caesar("thinkful");
-        //let expected = false;
-        expect(actual).to.be.false;
+        let expected = false;
+        expect(actual).to.eql(expected);
     })
        
 })
+
