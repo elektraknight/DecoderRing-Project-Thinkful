@@ -5,8 +5,8 @@ const expect = require('chai').expect;
 describe('Caesar shift', () => {
     it(`return false if shift is 0, < -25, >25`, () => {
         let actual =( caesar("thinkful", 0) || caesar("thinkful", -26) || caesar("thinkful",  26));
-        let expected = false;
-        expect(actual).to.equal(expected);
+       // let expected = false;
+        expect(actual).to.be.false;
     })
     
     it(`ignores capital letters and handles past the letter z`, () => {
@@ -23,8 +23,8 @@ describe('Caesar shift', () => {
     
     it(`(thinkful, 3, false) should be: thinkful`, () => {
         let actual = caesar("wklqnixo", 3, false);
-        let expected = 'thinkful';
-        expect(actual).to.equal(expected);
+        //let expected = 'thinkful';
+        expect(actual).to.be.false;
     })
     
     it(`(This is a secret message!, 8) should be: bpqa qa i amkzmb umaaiom!`, () => {
@@ -35,8 +35,8 @@ describe('Caesar shift', () => {
     
     it(`(thinkful) should be: false`, () => {
         let actual = caesar("thinkful");
-        let expected = false;
-        expect(actual).to.equal(expected);
+        //let expected = false;
+        expect(actual).to.be.false;
     })
        
 })
