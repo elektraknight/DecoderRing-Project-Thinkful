@@ -17,7 +17,7 @@ const caesarModule = (function () {
           if (letter.charCodeAt(0) < 97) {return letter};
           let charNum = letter.charCodeAt(0) + parseInt(shift)
           if (charNum > 122){
-              num = 96 + (charNum - 122)
+              charNum = 96 + (charNum - 122)
           }
           else if(charNum < 97){
               charNum += 26
